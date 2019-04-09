@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { reportsService } from '../shared/report.service';
 import { report } from '../shared/report.model';
-import { windowTime } from 'rxjs-compat/operator/windowTime';
+
 
 @Component({
   selector: 'app-report',
@@ -17,16 +17,16 @@ import { windowTime } from 'rxjs-compat/operator/windowTime';
 })
 export class ReportComponent implements OnInit,OnDestroy {
 
-  
 
 
-  
+
+
   hide = true;
   report: FormGroup;
   Jwt: string;
   id: string;
   // repItem: report;
-  
+
   subscription:Subscription;
 
   constructor(private fb: FormBuilder,
@@ -46,16 +46,16 @@ export class ReportComponent implements OnInit,OnDestroy {
     this.id = JwtObj.sub;
     console.log(this.id);
 
-    
+
         this.report = this.fb.group({
-          
+
           msg :[null,Validators.required],
 
         });
 
 
-    
-   
+
+
 
   }
 

@@ -1,6 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Admin } from "../shared/admin.model";
-import { Http } from "@angular/http";
+
 import { Subject } from "rxjs";
 
 @Injectable({
@@ -9,8 +10,9 @@ import { Subject } from "rxjs";
 export class AdminserviceService {
 
     adminsChanged= new Subject<Admin[]>();
-    http: Http;
-    
+    http: HttpClientModule
+
+
     private admins: Admin[] = [
 
       ];
