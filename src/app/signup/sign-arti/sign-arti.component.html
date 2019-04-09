@@ -1,0 +1,73 @@
+
+<div class="artisanWrapper">
+    <br><br>
+<div class="wrapper fadeInDown">
+    <div class="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="underlineHover"> S'inscrire en tant qu'artisan </h2>
+      <br>
+      <br>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://cdn0.iconfinder.com/data/icons/common-icons/512/settings.png" id="icon" alt="User Icon" class="responsive-image" style="max-width: 100px;" />
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="signup" novalidate (ngSubmit)="onSubmit()" >
+        <input 
+        type="email" class="fadeIn second" name="email" placeholder="Email"  formControlName="email">
+        <input 
+        type="text" 
+         
+        class="fadeIn second" 
+        name="name"
+        placeholder="name"
+        formControlName="name">
+        <input 
+        type="password" 
+         
+        class="fadeIn third" 
+        name="password" 
+        placeholder="password" 
+        formControlName="password">
+        <input type="password" 
+         
+        class="fadeIn third" 
+        name="Cpassword" 
+        placeholder="Confirm password"
+        formControlName="Cpassword">
+        <input type="text" 
+        id="phone" 
+        class="fadeIn third" 
+        name="phone" 
+        placeholder="phone number"
+        formControlName="phone">
+        <input type="text" 
+        id="adresse" 
+        class="fadeIn third" 
+        name="adresse" 
+        placeholder="zone d'intervention"
+        formControlName="address">
+        <input type="text" 
+        
+        class="fadeIn third" 
+        name="service" 
+        placeholder="service"
+        formControlName="service">
+        <!-- <button mat-raised-button
+        type="submit" 
+        class="fadeIn fourth" >
+        S'inscrire</button> -->
+        <input type="submit" class="fadeIn fourth" value="S'inscrire">
+
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div class="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+    <br>
+  </div>
+  

@@ -1,0 +1,18 @@
+table {
+    width: 80%;
+    text-align: -webkit-center;
+    margin: 2em auto;    
+    text-align: center; 
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    text-align: -webkit-center;
+    margin: 2em auto;    
+    text-align: center; 
+  }
+
+  th .mat-header-cell{
+    text-align: center; 
+  }

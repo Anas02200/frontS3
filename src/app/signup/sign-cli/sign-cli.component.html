@@ -1,0 +1,65 @@
+
+  <div class="clientWrapper">
+      <br><br>
+  <div class="wrapper fadeInDown">
+    <div class="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="underlineHover"> S'inscrire en tant que client </h2>
+      <br>
+      <br>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://i.pinimg.com/originals/dd/64/1b/dd641b9a746f7a1bd7a026267e45fcce.png" id="icon" alt="User Icon" class="responsive-image" style="max-width: 100px;" />
+      </div>
+  
+      <!-- Login Form -->
+     
+        <form [formGroup]="signup" novalidate (ngSubmit)="onSubmit()" >
+        <input 
+        type="email" class="fadeIn second" name="email" placeholder="Email"  formControlName="email">
+        <input 
+        type="text" 
+         
+        class="fadeIn second" 
+        name="name"
+        placeholder="name"
+        formControlName="name">
+        <input 
+        type="password" 
+         
+        class="fadeIn third" 
+        name="password" 
+        placeholder="password" 
+        formControlName="password">
+        <input type="password" 
+         
+        class="fadeIn third" 
+        name="Cpassword" 
+        placeholder="Confirm password"
+        formControlName="Cpassword">
+        <input type="text" 
+         
+        class="fadeIn third" 
+        name="phone" 
+        placeholder="phone number"
+        formControlName="phone">
+        
+        <!-- <button mat-raised-button
+        type="submit" 
+        class="fadeIn fourth" >
+        S'inscrire</button> -->
+
+        <input type="submit" class="fadeIn fourth" value="S'inscrire">
+      </form>
+  
+  
+      <!-- Remind Passowrd -->
+      <div class="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+    </div>
+    <br><br><br><br>  <br><br><br><br>  <br><br>
+  </div>
+  
+ 
+  

@@ -1,0 +1,26 @@
+
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://images.pexels.com/photos/1409215/pexels-photo-1409215.jpeg?cs=srgb&dl=blade-cut-cutter-1409215.jpg&fm=jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Fixer
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">A VOTRE SERVICE</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p *ngIf="isAuth()" class="w3-large w3-center">Bienvenue {{id}}</p>
+  </div>
+
+</div>
+
+

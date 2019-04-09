@@ -1,0 +1,41 @@
+<html>
+<br><br><br><br><br><br><br><br><br>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="underlineHover"> Sign In </h2>
+      <br>
+      <br>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://previews.123rf.com/images/azvector/azvector1802/azvector180200498/95901894-access-key-people-user-icon-.jpg" id="icon" alt="User Icon" class="responsive-image" style="max-width: 100px;" />
+      </div>
+  
+      <!-- Login Form -->
+      <form (ngSubmit)="onSignin(f)" #f="ngForm">
+        <input 
+        type="text" 
+        id="login" 
+        class="fadeIn second" 
+        name="login"
+        placeholder="login"
+        ngModel >
+        <input 
+        type="password" 
+        id="password" 
+        class="fadeIn third" 
+        name="password"
+        placeholder="password"
+        ngModel>
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </html>

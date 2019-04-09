@@ -1,0 +1,129 @@
+<mat-tab-group dynamicHeight mat-stretch-tabs animationDuration="750ms">
+<!-- artisan -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">person</mat-icon>
+      Artisans
+    </ng-template>
+    <div class="grid-container">
+
+      <mat-grid-list cols="4" rowHeight="450px" *ngIf="artisans">
+        <mat-grid-tile *ngFor="let artisanEl of artisans;let i =index">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+                {{artisanEl.name}}
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]=artisanEl.service.imgUrl alt={{artisanEl.name}} >
+            <mat-card-content class="dashboard-card-content">
+                <p>
+                    {{artisanEl.email}}
+                  </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-mini-fab color="warn" (click)="onDeleteArti(artisanEl,i)"><mat-icon>delete</mat-icon></button>
+              <button mat-mini-fab color="accent" (click)="onCheckArti(i)"><mat-icon>contact_support</mat-icon></button>
+
+              </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+    
+      </mat-grid-list>
+      
+    </div>
+    
+  </mat-tab>
+<!-- client -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">build</mat-icon>
+      Clients
+    </ng-template>
+    <div class="grid-container">
+
+      <mat-grid-list cols="4" rowHeight="450px" *ngIf="clients">
+        <mat-grid-tile *ngFor="let clientEl of clients;let i =index ">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+                {{clientEl.name}}
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Expand</button>
+                  <button mat-menu-item>Remove</button>
+                </mat-menu>
+              </mat-card-title>
+            </mat-card-header>
+            <!-- <img mat-card-image src="https://cdn.pixabay.com/photo/2016/08/31/11/54/user-1633249_960_720.png" alt={{clientEl.name}} > -->
+            <mat-card-content class="dashboard-card-content">
+                <p>
+                    {{clientEl.email}}
+                  </p>
+                <p>
+                    {{clientEl.phone}}
+                  </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-mini-fab color="warn" (click)="onDeleteClient(clientEl,i)"><mat-icon>delete</mat-icon></button>
+              <button mat-mini-fab color="accent" (click)="onCheckClient(i)"><mat-icon>contact_support</mat-icon></button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+    
+      </mat-grid-list>
+      
+    </div>  
+  </mat-tab>
+<!-- service -->
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">settings</mat-icon>
+      Services
+    </ng-template>
+
+    <div class="grid-container">
+        <button mat-raised-button color="primary">Ajouter un service</button>
+        <mat-grid-list cols="4" rowHeight="450px" *ngIf="services">
+          <mat-grid-tile *ngFor="let serviceEl of services; let i = index ">
+            <mat-card class="dashboard-card">
+              <mat-card-header>
+                <mat-card-title>
+                  {{serviceEl.name}}
+                  <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>Expand</button>
+                    <button mat-menu-item>Remove</button>
+                  </mat-menu>
+                </mat-card-title>
+              </mat-card-header>
+              <img mat-card-image [src]=serviceEl.imgUrl alt={{serviceEl.name}} >
+              <mat-card-content class="dashboard-card-content">
+                  <p>
+                      {{serviceEl.desc}}
+                    </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-mini-fab color="warn" (click)="onDeleteService(serviceEl,i)"><mat-icon>delete</mat-icon></button>
+                <button mat-mini-fab color="accent" (click)="onCheckService(i)"><mat-icon>contact_support</mat-icon></button>
+                </mat-card-actions>
+            </mat-card>
+          </mat-grid-tile>
+      
+        </mat-grid-list>
+        
+      </div>
+      
+  </mat-tab>
+</mat-tab-group>

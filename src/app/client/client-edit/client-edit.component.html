@@ -1,0 +1,131 @@
+<mat-card>    
+    <!-- Title of an Card -->    
+    <mat-card-title>    
+        Modification du compte de {{id}}
+    </mat-card-title>    
+    <hr>
+    <mat-card-content>    
+        <form *ngIf="clientI" [formGroup]="edit" novalidate (ngSubmit)="onSubmit()">    
+            <table>    
+                <tr>    
+                    <td>    
+                        <mat-form-field class="demo-full-width">    
+                            <input 
+                            type="text"
+                            matInput 
+                            name="name"
+                            placeholder="Nom" 
+                            formControlName="name"
+                            >    
+                        </mat-form-field>    
+                    </td>    
+
+                </tr>    
+                <tr>
+                    <td>    
+                        <mat-form-field class="demo-full-width">    
+                            <input 
+                            type="text"
+                            matInput 
+                            name="phone"
+                            placeholder="Num de telephone" 
+                            formControlName="phone"
+                            >    
+                        </mat-form-field>    
+                    </td>    
+                </tr>
+                <tr>    
+                    <td colspan="2">    
+                        <mat-form-field class="demo-full-width">    
+                            <input 
+                            type="email" 
+                            matInput 
+                            name="email"
+                            placeholder="Email" 
+                            formControlName="email"
+                            >   
+                        </mat-form-field>    
+                    </td>    
+                </tr>    
+
+                <!-- <tr>    
+                    <td>    
+                        <span>Gender</span><br><br>    
+                        <mat-radio-group>    
+                            <mat-radio-button value="1">Male </mat-radio-button>    
+                            <mat-radio-button value="2">Female</mat-radio-button>    
+                        </mat-radio-group>    
+                    </td>    
+                    <td><br>    
+                        <mat-form-field>    
+                            <mat-select placeholder="Select Blog" [(value)]="selected">    
+                                <mat-option>-- Select Any --</mat-option>    
+                                <mat-option value="1">C#Corner</mat-option>    
+                                <mat-option value="2">C#Corner</mat-option>    
+                                <mat-option value="3">C#Corner</mat-option>    
+                            </mat-select>    
+                        </mat-form-field>    
+                    </td>    
+                </tr>     -->
+                <tr>    
+                    <td colspan="2">    
+                        <mat-form-field>
+                            <input 
+                            matInput 
+                            type="password"
+                            name="password" 
+                            placeholder="Mot de passe" 
+
+                            [type]="hide ? 'password' : 'text'"
+                            formControlName="password">
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </mat-form-field>
+                    </td>    
+                  </tr>    
+                  <tr>    
+                    
+                    
+                          <td colspan="2">    
+                              <mat-form-field>
+                                  <input 
+                                  matInput 
+                                  type="password"
+                                  name="passwordc" 
+                                  placeholder="Confimer mot de passe" 
+                                  [type]="hide ? 'password' : 'text'"
+                                  formControlName="passwordc">
+                                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                              </mat-form-field>
+                          </td>    
+    
+                       
+                </tr>    
+                <!-- <tr>    
+                    <td colspan="2">    
+                        <mat-form-field class="demo-full-width">    
+                            <input matInput [matDatepicker]="picker" placeholder="Date of birth">    
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>    
+                            <mat-datepicker touchUi="true" #picker></mat-datepicker>    
+                        </mat-form-field>    
+                    </td>    
+                </tr>     -->
+                <br>
+                <mat-divider></mat-divider>
+                <br>
+                <tr>    
+                    <td colspan="2" class="content-center">    
+                        <button 
+                        type="submit"
+                        mat-raised-button 
+                        color="accent"
+                        >   Submit   </button>    
+                        <button 
+                        mat-raised-button 
+                        color="warn"
+                        >   Clear   </button>    
+                    </td>    
+                </tr>    
+            </table>    
+        </form>    
+    </mat-card-content>    
+</mat-card>   
